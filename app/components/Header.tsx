@@ -1,0 +1,23 @@
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../public/zana.svg";
+import Socials from "./Socials";
+export default function Header() {
+  return (
+    <header className="md:px-8 lg:px-24 h-24 flex justify-between items-center relative md:fixed w-full z-30">
+      <Link href={"/"} className="flex items-center">
+        <Image src={logo} alt="" className="w-12" />
+        <h1 className="-translate-x-3">Photography</h1>
+      </Link>
+      <div className="md:flex md:gap-4 hidden">
+        <nav className="flex gap-4">
+          <Link href={"/"}>Home</Link>
+          <Link href={"/about"}>About</Link>
+          <Link href={"/portfolio"}>Portfolio</Link>
+          <Link href={"/contact"}>Contact</Link>
+        </nav>
+        <Socials />
+      </div>
+    </header>
+  );
+}
