@@ -9,7 +9,7 @@ export default function Header() {
         <Image src={logo} alt="" className="w-12" />
         <h1 className="-translate-x-3">Photography</h1>
       </Link>
-      <div className="md:flex md:gap-4 hidden">
+      <div className="md:gap-4 md:flex max-[768px]:hidden">
         <nav className="flex gap-4">
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>

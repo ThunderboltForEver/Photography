@@ -18,7 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={playfair_display.className + ' selection:bg-[#E4F1F4]'}>
         <Header />
-        {children}</body>
+        {children}
+        </body>
     </html>
   )
 }

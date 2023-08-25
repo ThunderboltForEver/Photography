@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   .btn {
-    @apply bg-black text-white p-2
+    @apply bg-black p-2 text-white;
   }
 }
