@@ -26,8 +26,8 @@ export default function Portfolio() {
       </div>
       <div className="grid grid-cols-1 mx-auto md:grid-cols-2 gap-4">
         
-          {images.map((image) => (
-            <div className="overflow-hidden">
+          {images.map((image,key) => (
+            <div key={key} className="overflow-hidden">
             <Image src={image} alt="" className="hover:scale-110 transition" />
             </div>
           ))}
