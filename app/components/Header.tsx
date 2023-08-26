@@ -4,7 +4,7 @@ import logo from "../../public/zana.svg";
 import Socials from "./Socials";
 export default function Header() {
   return (
-    <header className="md:px-8 lg:px-24 h-24 flex justify-between items-center relative md:fixed w-full z-30">
+    <header className="px-4 md:px-8 xl:px-20 h-24 flex justify-between items-center relative sm:fixed w-full z-30">
       <Link href={"/"} className="flex items-center">
         <Image src={logo} alt="" className="w-12" />
         <h1 className="-translate-x-3">Photography</h1>

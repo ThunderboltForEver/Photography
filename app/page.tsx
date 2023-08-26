@@ -5,10 +5,10 @@ import womanImage from "../public/img/home/woman.png";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col md:flex-row h-screen md:px-8 lg:px-24 items-center md:relative">
-        <div className=" md:ml-20 mb-10 md:absolute md:z-30">
+      <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[40%,1fr] lg:grid-cols-2 mx-auto h-screen px-4 md:px-8  xl:px-20 items-center">
+        <div className="mx-auto mb-10 md:relative md:left-12 min-w-fit">
           <div className="mb-6">
-            <h1 className="text-[2.4rem] md:text-[3rem] lg:text-[4.5rem] font-semibold">
+            <h1 className="text-[2.5rem] lg:text-[4rem] font-semibold">
               Photographer <br /> & Film Maker
             </h1>
             <p className="text-[1.3rem]">Los Angles , USA</p>
@@ -18,8 +18,8 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="md:max-w-[50%] h-full md:absolute md:right-[30px] lg:right-[94px] overflow-hidden">
-          <Image src={womanImage} alt={""} className="h-full hover:scale-110 transition duration-300"/>
+        <div className="max-w-full h-full overflow-hidden">
+          <Image src={womanImage} alt={""} className="max-h-full min-h-full hover:scale-110 transition duration-300"/>
         </div>
       </main>
     </>
