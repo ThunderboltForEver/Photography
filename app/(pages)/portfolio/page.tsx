@@ -13,9 +13,9 @@ export default function Portfolio() {
           Portfolio
         </h1>
         <p className="text-gray-800 leading-7">
-          My photography portfolio is a visual odyssey capturing life's
+          My photography portfolio is a visual odyssey capturing life&apos;s
           extraordinary moments, from the vibrant hues of sunsets over remote
-          landscapes to the intimate emotions shared between people."
+          landscapes to the intimate emotions shared between people.
         </p>
         <p className="text-gray-800 leading-7">
           Each frame in my portfolio is a testament to my commitment to
@@ -27,9 +27,16 @@ export default function Portfolio() {
         </Link>
       </div>
       <div className=" flex flex-wrap justify-center md:grid md:grid-cols-2 gap-4 ">
-        {images.map((image,key) => (
-          <div className="overflow-hidden w-full sm:w-[70%] md:w-full" key={key}>
-            <Image src={image} alt="" className="hover:scale-110 transition w-full" />
+        {images.map((image, key) => (
+          <div
+            className="overflow-hidden w-full sm:w-[70%] md:w-full"
+            key={key}
+          >
+            <Image
+              src={image}
+              alt=""
+              className="hover:scale-110 transition w-full"
+            />
           </div>
         ))}
       </div>
