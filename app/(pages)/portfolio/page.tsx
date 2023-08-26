@@ -13,9 +13,9 @@ export default function Portfolio() {
           Portfolio
         </h1>
         <p className="text-gray-800 leading-7">
-          My photography portfolio is a visual odyssey capturing life&apos;s
+          My photography portfolio is a visual odyssey capturing life's
           extraordinary moments, from the vibrant hues of sunsets over remote
-          landscapes to the intimate emotions shared between people.
+          landscapes to the intimate emotions shared between people."
         </p>
         <p className="text-gray-800 leading-7">
           Each frame in my portfolio is a testament to my commitment to
