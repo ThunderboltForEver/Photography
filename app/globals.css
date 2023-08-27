@@ -7,3 +7,6 @@
     @apply bg-black p-2 text-white;
   }
 }
+.gradient {
+  background-image: linear-gradient(to bottom, white 0% 30%, #E4F1F4 30% 100% );
+}
