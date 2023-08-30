@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/zana.svg";
 import Socials from "./Socials";
+import MobileNav from "./MobileNav";
+
 export default function Header() {
   return (
     <header className="px-4 md:px-8 xl:px-20 h-24 flex justify-between items-center relative sm:fixed w-full z-30">
@@ -18,6 +20,7 @@ export default function Header() {
         </nav>
         <Socials />
       </div>
+        <MobileNav />
     </header>
   );
 }
