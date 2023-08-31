@@ -1,25 +1,27 @@
-import './globals.css'
-import { Playfair_Display } from 'next/font/google'
-import Header from './components/Header'
+import "./globals.css";
+import { Playfair_Display } from "next/font/google";
+import Header from "./components/Header";
 
-const playfair_display = Playfair_Display({ subsets: ['latin'] })
+const playfair_display = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Photography',
-  description: 'Save all your images',
-}
+  title: "Photography",
+  description: "Save all your images",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={playfair_display.className + ' selection:bg-[#E4F1F4]'}>
-        <Header />
-        {children}
-        </body>
+      <body className={playfair_display.className + " selection:bg-[#E4F1F4]"}>
+        <div className=" overflow-hidden">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
-  )
+  );
 }
