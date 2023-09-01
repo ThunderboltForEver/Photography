@@ -3,22 +3,44 @@ import Link from "next/link";
 import { useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
-import { motion ,useScroll } from "framer-motion";
+import { Variants, motion } from "framer-motion";
 
-export default function MobileNav() {
-  const [openMenu, setOpenMenu] = useState(false);
+const MobileNav: React.FC = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-  const menuVariants = {
+  interface MenuVariants {
+    hidden: {
+      x: string;
+      transition?: {
+        easeOut: number[];
+      };
+    };
+    show: {
+      x: number;
+      transition: {
+        ease: number[];
+      };
+    };
+  }
+  const menuVariants: MenuVariants = {
     hidden: {
       x: "100%",
+      transition: {
+        easeOut: [2.6, 2.4, 1.5, 0.9],
+      },
     },
     show: {
       x: 0,
       transition: {
-        ease: [2.6, 2.4, -0.05, 0.9],
+        ease: [2.6, 2.4, 1.5, 0.9],
       },
     },
   };
+  const variants: Variants = {
+    hidden: menuVariants.hidden,
+    show: menuVariants.show,
+  };
+
   return (
     <nav className="md:hidden">
       <div
@@ -32,9 +54,9 @@ export default function MobileNav() {
 
       <motion.div
         className="md:hidden text-xl font-semibold fixed top-0 right-0 min-h-screen bg-[#f9fbfb] flex flex-col items-center justify-center gap-6 w-[250px]"
-        initial="hidden"
-        variants={menuVariants}
-        animate={openMenu ? "show" : ""}
+        initial={menuVariants.hidden}
+        variants={variants}
+        animate={openMenu ? "show" : "hidden"}
       >
         <div
           className="absolute top-4 left-4 cursor-pointer"
@@ -61,4 +83,5 @@ export default function MobileNav() {
       </motion.div>
     </nav>
   );
-}
+};
+export default MobileNav;

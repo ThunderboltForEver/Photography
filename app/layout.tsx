@@ -4,7 +4,12 @@ import Header from "./components/Header";
 
 const playfair_display = Playfair_Display({ subsets: ["latin"] });
 
-export const metadata = {
+interface Metadata {
+  title: string;
+  description: string;
+}
+
+export const metadata:Metadata = {
   title: "Photography",
   description: "Save all your images",
 };
