@@ -1,10 +1,11 @@
 import Button from "@/app/components/Button/Button";
 import Image from "next/image";
 import WomanImage from "../../../public/img/contact/woman.png";
+import PageWrapper from "@/app/components/PageWrapper/PageWrapper";
 
 export default function contact() {
   return (
-    <section className="gradient grid grid-cols-1 gap-8 lg:gap-0 md:grid-cols-2 items-center min-h-screen px-4 md:px-8 lg:px-24">
+    <PageWrapper className="gradient">
       <div className=" max-w-[80%] mx-auto sm:mt-24 flex flex-col gap-4 mb-40 sm:mb-0">
         <div>
           <h1 className="text-[3rem] lg:text-[3.8rem] font-semibold">Contact Me</h1>
@@ -47,6 +48,7 @@ export default function contact() {
           className="md:absolute md:top-1/2 md:-translate-y-[50%] lg:top-0 lg:translate-y-20 lg:min-h-screen md:bottom-0 md:max-h-[900px]"
         />
       </div>
-    </section>
+      
+  </PageWrapper>
   );
 }

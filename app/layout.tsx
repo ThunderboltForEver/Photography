@@ -2,6 +2,7 @@ import "./globals.css";
 import { Playfair_Display } from "next/font/google";
 import Header from "./components/Header";
 
+
 const playfair_display = Playfair_Display({ subsets: ["latin"] });
 
 interface Metadata {
@@ -9,7 +10,7 @@ interface Metadata {
   description: string;
 }
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Photography",
   description: "Save all your images",
 };

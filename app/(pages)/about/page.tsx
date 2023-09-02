@@ -1,10 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import womanImage from "../../../public/img/about/woman.png";
+import PageWrapper from "@/app/components/PageWrapper/PageWrapper";
 
 export default function About() {
   return (
-    <section className="grid grid-cols-1 gap-8 lg:gap-0 md:grid-cols-2 items-center min-h-screen px-4 md:px-8 lg:px-24">
+    <PageWrapper>
       <div className=" md:max-w-[380px] mx-auto sm:pt-24 md:pt-0">
         <Image src={womanImage} alt="" className="max-h-full" />
       </div>
@@ -22,6 +24,6 @@ export default function About() {
           View My Work
         </Link>
       </div>
-    </section>
+    </PageWrapper>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 import { Variants, motion } from "framer-motion";
+import { links } from "../data/NavData";
 
 const MobileNav: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -67,18 +68,13 @@ const MobileNav: React.FC = () => {
           <IoMdClose />
         </div>
         <ul className="h-full flex flex-col items-center gap-5">
-          <li>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link href={"/about"}>About</Link>
-          </li>
-          <li>
-            <Link href={"/portfolio"}>Portfolio</Link>
-          </li>
-          <li>
-            <Link href={"/contact"}>Contact</Link>
-          </li>
+          {links.map((link) => {
+            return (
+              <Link key={link.id} href={link.url} onClick={()=>{setOpenMenu(false)}}>
+              {link.text}
+            </Link>
+            );
+          })}
         </ul>
       </motion.div>
     </nav>

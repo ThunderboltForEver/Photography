@@ -3,6 +3,7 @@ import Link from "next/link";
 import logo from "../../public/zana.svg";
 import Socials from "./Socials";
 import MobileNav from "./MobileNav";
+import { links } from "../data/NavData";
 
 export default function Header() {
   return (
@@ -13,14 +14,17 @@ export default function Header() {
       </Link>
       <div className="md:gap-4 md:flex max-[768px]:hidden">
         <nav className="flex gap-4">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/about"}>About</Link>
-          <Link href={"/portfolio"}>Portfolio</Link>
-          <Link href={"/contact"}>Contact</Link>
+          {links.map((link) => {
+            return (
+              <Link key={link.id} href={link.url}>
+                {link.text}
+              </Link>
+            );
+          })}
         </nav>
         <Socials />
       </div>
-        <MobileNav />
+      <MobileNav />
     </header>
   );
 }
