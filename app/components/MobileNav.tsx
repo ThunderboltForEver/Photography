@@ -67,15 +67,21 @@ const MobileNav: React.FC = () => {
         >
           <IoMdClose />
         </div>
-        <ul className="h-full flex flex-col items-center gap-5">
+        
           {links.map((link) => {
             return (
-              <Link key={link.id} href={link.url} onClick={()=>{setOpenMenu(false)}}>
-              {link.text}
-            </Link>
+              <Link
+                key={link.id}
+                href={link.url}
+                onClick={() => {
+                  setOpenMenu(false);
+                }}
+              >
+                {link.text}
+              </Link>
             );
           })}
-        </ul>
+        
       </motion.div>
     </nav>
   );

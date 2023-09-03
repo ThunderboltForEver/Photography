@@ -1,9 +1,7 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { woman1, woman2, woman3, woman4 } from "@/public/img/exports";
-import { motion } from "framer-motion";
 import PageWrapper from "@/app/components/PageWrapper/PageWrapper";
 const images = [woman1, woman2, woman3, woman4];
 

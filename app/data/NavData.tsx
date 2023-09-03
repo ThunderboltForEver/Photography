@@ -16,12 +16,12 @@ export const links:linksObject[] =[
     text:"About"
   },
   {
-    id:1,
+    id:3,
     url:"/portfolio",
     text:"Portfolio"
   },
   {
-    id:1,
+    id:4,
     url:"/contact",
     text:"Contact"
   },

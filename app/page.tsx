@@ -1,8 +1,6 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import womanImage from "../public/img/home/woman.png";
-import { motion } from "framer-motion";
 import PageWrapper from "./components/PageWrapper/PageWrapper";
 
 export default function Home() {
