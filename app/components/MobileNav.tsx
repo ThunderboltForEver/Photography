@@ -5,6 +5,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 import { Variants, motion } from "framer-motion";
 import { links } from "../data/NavData";
+import Socials from "./Socials";
 
 const MobileNav: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
@@ -67,21 +68,23 @@ const MobileNav: React.FC = () => {
         >
           <IoMdClose />
         </div>
-        
-          {links.map((link) => {
-            return (
-              <Link
-                key={link.id}
-                href={link.url}
-                onClick={() => {
-                  setOpenMenu(false);
-                }}
-              >
-                {link.text}
-              </Link>
-            );
-          })}
-        
+
+        {links.map((link) => {
+          return (
+            <Link
+              key={link.id}
+              href={link.url}
+              onClick={() => {
+                setOpenMenu(false);
+              }}
+            >
+              {link.text}
+            </Link>
+          );
+        })}
+        <div className="absolute bottom-40">
+          <Socials />
+        </div>
       </motion.div>
     </nav>
   );

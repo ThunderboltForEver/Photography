@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ImFacebook, ImTwitter, ImInstagram, ImGithub } from "react-icons/im";
 export default function Socials() {
   return (
-    <ul className="flex items-center gap-x-2">
+    <ul className="flex items-center gap-x-4 md:gap-x-2 ">
       <li>
         <Link href={""}>
           <ImFacebook />

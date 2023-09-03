@@ -35,7 +35,7 @@ export default function PageWrapper({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.8,
       },
     },
   };
@@ -46,7 +46,7 @@ export default function PageWrapper({
   };
 
   return (
-    <AnimatePresence mode="popLayout" initial={true}>
+    <AnimatePresence mode="wait" initial={true}>
       <motion.section
         key={pathName}
         initial={"hidden"}
