@@ -3,7 +3,7 @@ import Link from "next/link";
 import womanImage from "../public/img/home/woman.png";
 import PageWrapper from "./components/PageWrapper/PageWrapper";
 
-export default function Home() {
+export default function Home():React.ReactNode {
   return (
     <PageWrapper  className="overflow-hidden sm:grid-cols-2 md:grid-cols-[40%,1fr] lg:grid-cols-2 mx-auto h-screen md:px-8  xl:px-20 items-center">
       
