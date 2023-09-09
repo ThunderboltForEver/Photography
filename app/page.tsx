@@ -9,17 +9,14 @@ export default function Home() {
   const pathName = usePathname();
 
   return (
-   
-    
-  
     <section className="overflow-hidden sm:grid-cols-2 md:grid-cols-[40%,1fr] lg:grid-cols-2 mx-auto h-screen md:px-8  xl:px-20 items-center  grid grid-cols-1 gap-8 lg:gap-0 min-h-screen px-4 lg:px-24">
-      <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={true}>
         <motion.div
-          key={pathName}
+         key={pathName}
           className="mx-auto mb-10 md:relative md:left-12 min-w-fit"
           initial={{ y: "-180%" }}
           animate={{ y: 0 }}
-          exit={{ y: "-180%"}}
+          exit={{ y: "-180%" }}
           transition={{ duration: 0.8, ease: [0.6, 0.01, -0.05, 0.9] }}
         >
           <div className="mb-6">
@@ -46,8 +43,7 @@ export default function Home() {
             className="max-h-full min-h-full hover:scale-110 transition duration-300"
           />
         </motion.div>
-      </AnimatePresence>
-    </section>
-    
+    </AnimatePresence>
+      </section>
   );
 }
