@@ -8,8 +8,12 @@ export default function contact() {
     <PageWrapper className="gradient">
       <div className=" max-w-[80%] mx-auto sm:mt-24 flex flex-col gap-4 mb-40 sm:mb-0">
         <div>
-          <h1 className="text-[3rem] lg:text-[3.8rem] font-semibold">Contact Me</h1>
-          <p className="text-[#666]">I would love to get suggestions from you</p>
+          <h1 className="text-[3rem] lg:text-[3.8rem] font-semibold">
+            Contact Me
+          </h1>
+          <p className="text-[#666]">
+            I would love to get suggestions from you
+          </p>
         </div>
         <form action="" className="flex flex-col max-w-full gap-4">
           <div className="flex flex-1 relative flex-wrap gap-4">
@@ -48,7 +52,6 @@ export default function contact() {
           className="md:absolute md:top-1/2 md:-translate-y-[50%] lg:top-0 lg:translate-y-20 lg:min-h-screen md:bottom-0 md:max-h-[900px]"
         />
       </div>
-      
-  </PageWrapper>
+    </PageWrapper>
   );
 }

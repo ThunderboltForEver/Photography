@@ -7,41 +7,41 @@ import { Variants, motion } from "framer-motion";
 import { links } from "../data/NavData";
 import Socials from "./Socials";
 
-const MobileNav: React.FC = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
+interface MenuVariants {
+  hidden: {
+    x: string;
+    transition?: {
+      easeOut: number[];
+    };
+  };
+  show: {
+    x: number;
+    transition: {
+      ease: number[];
+    };
+  };
+}
+const menuVariants: MenuVariants = {
+  hidden: {
+    x: "100%",
+    transition: {
+      easeOut: [2.6, 2.4, 1.5, 0.9],
+    },
+  },
+  show: {
+    x: 0,
+    transition: {
+      ease: [2.6, 2.4, 1.5, 0.9],
+    },
+  },
+};
+const variants: Variants = {
+  hidden: menuVariants.hidden,
+  show: menuVariants.show,
+};
 
-  interface MenuVariants {
-    hidden: {
-      x: string;
-      transition?: {
-        easeOut: number[];
-      };
-    };
-    show: {
-      x: number;
-      transition: {
-        ease: number[];
-      };
-    };
-  }
-  const menuVariants: MenuVariants = {
-    hidden: {
-      x: "100%",
-      transition: {
-        easeOut: [2.6, 2.4, 1.5, 0.9],
-      },
-    },
-    show: {
-      x: 0,
-      transition: {
-        ease: [2.6, 2.4, 1.5, 0.9],
-      },
-    },
-  };
-  const variants: Variants = {
-    hidden: menuVariants.hidden,
-    show: menuVariants.show,
-  };
+export default function MobileNav() {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
     <nav className="md:hidden">
@@ -88,5 +88,4 @@ const MobileNav: React.FC = () => {
       </motion.div>
     </nav>
   );
-};
-export default MobileNav;
+}
